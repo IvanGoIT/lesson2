@@ -12,11 +12,23 @@ public class HomeWork {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
 
-        while(isInt(str))
+        int i;
+
+        while(true)
         {
-            str = sc.nextLine();
+            try {
+                System.out.println("Введите число:");
+                i = sc.nextInt();
+                sc.nextLine();
+                break;
+            } catch (Exception e){
+                System.out.println("Введено не число!!!");
+                sc.nextLine();
+            }
         }
+        //
+
+        System.out.println("Вы ввели " + i);
     }
 }
